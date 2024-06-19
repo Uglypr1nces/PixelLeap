@@ -6,6 +6,7 @@
     position: absolute;
     top: 76%;
     left: 50%;
+    transition: top 0.5s, left 0.5s;
 }
 
 .enemy1{

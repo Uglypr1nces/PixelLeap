@@ -3,32 +3,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var platform2 = document.querySelector('.Platform2');
     var platform3 = document.querySelector('.Platform3');
 
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
-    function movePlatforms() {
-        platform1.style.top = getRandomArbitrary(20, 100) + '%';
-        platform2.style.top = getRandomArbitrary(20, 100) + '%';
-        platform3.style.top = getRandomArbitrary(20, 100) + '%';
-
-        var intervalId = setInterval(function() {
-            platform1.style.left = (parseFloat(platform1.style.left) || 0) - 0.5 + '%'; 
-            platform2.style.left = (parseFloat(platform2.style.left) || 0) - 0.5 + '%';
-            platform3.style.left = (parseFloat(platform3.style.left) || 0) - 0.5 + '%';
-
-            if (parseFloat(platform1.style.left) <= -100) {
-                platform1.style.left = '100%';
-            }
-            if (parseFloat(platform2.style.left) <= -100) {
-                platform2.style.left = '100%';
-            }
-            if (parseFloat(platform3.style.left) <= -100) {
-                platform3.style.left = '100%';
-            }
-        }, 100);
-    }
+    var speed = 1;
 
     movePlatforms();
-    setInterval(movePlatforms, 10000);  // Adjust the timing for a better animation effect
+
 });
+
+function movePlatforms() {
+    while (true) {
+        platform1.style.top = (parseFloat(platform1.style.top) || 0) + speed + '%';
+        platform2.style.top = (parseFloat(platform2.style.top) || 0) + speed + '%';
+        platform3.style.top = (parseFloat(platform3.style.top) || 0) + speed + '%';
+        if (platform1.style.top === '100%') {
+            platform1.style.top = '0%';
+        }
+        if (platform2.style.top === '100%') {
+            platform2.style.top = '0%';
+        }
+        if (platform3.style.top === '100%') {
+            platform3.style.top = '0%';
+        }
+    }
+}
