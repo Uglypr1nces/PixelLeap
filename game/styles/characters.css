@@ -8,3 +8,37 @@
     left: 50%;
     transition: top 0.5s, left 0.5s;
 }
+
+.enemy1{
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 46%;
+    left: 70%;
+    transition: top 0.5s, left 0.5s;
+}
+
+.enemy2{
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transition: top 0.5s, left 0.5s;
+}
+
+.enemy3{
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 46%;
+    left: 30%;
+    transition: top 0.5s, left 0.5s;
+}
+
