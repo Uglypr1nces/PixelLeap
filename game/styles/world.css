@@ -14,29 +14,11 @@
     z-index: 1;
 }
 
-.Platform1{
+.Platform1,.Platform2,.Platform3{
     position: absolute;
-    width: 2%;
-    height: 20%;
-    left: 110%;
-    background-color: #02ff24;
-    z-index: 999999;
-}
-
-.Platform2{
-    position: absolute;
-    width: 2%;
-    height: 23%;
-    left: 101%;
-    background-color: #02ff24;
-    z-index: 999999;
-}
-
-.Platform3{
-    position: absolute;
-    width: 2%;
-    height: 16%;
-    left: 10%;
+    width: 20%;
+    height: 2%;
+    left: 50%;
     background-color: #02ff24;
     z-index: 999999;
 }
